@@ -15,6 +15,15 @@ Removes a file
 Lists all files in PWD or directoryName
 ## clear
 Clears text off Terminal
+## mv < filename1 > < filename2 >
+To rename filename1 to filename2 
+## open < folder/file name >
+To open the file or folder
+## open .
+Opens the current folder
+##cp < filename1 > < filename2 >
+To copy filename1 to filename2
+
 
 ###Special Directories
 ~ - Homes
@@ -23,6 +32,18 @@ Clears text off Terminal
 / - The root directory
 
 # GIT commands (all start with "git")
+When pushing to github:
+1. This adds files to changelist
+    - `git add .` or `-A` or `--all` to add everything or git add `< filename >` for specific changes
+
+2. `git commit - m "Some commit message"`
+    - if you forget `-m` you will be in the vi (inline text editor), type `i`, then type your message, press esc key, then `:wq` and hit enter key
+
+3. [Optionally] `git pull`
+    - Use this only if there are other changes not already in your local copy
+
+4. `git push < server >  < branch >`
+ - you can usually just do `git push`
 
 ## clone < repoURL >
 Downloads reposisitory to your local PWD
