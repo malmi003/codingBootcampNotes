@@ -135,12 +135,113 @@ or justTheOne = nested[0][0]; //1
 //===================================
 //Loops 
 //===================================
+//making sure you can run the same code over and over again
 
 var list = ["zeroth", "oneth", "twoth", "threeth"];
 
-//to loop over a whole array, use the for....in loop
+//--"for in" loop to loop over a whole array, use the for....in loop
 for ( var i in list ) {
     //the code in this block will run once for every element in array
     //"i" will be set to every index in the array
     console.log(list[i]);
 } //this will console log every item in array on separate log ie on different lines
+
+//--while loop is most general loop
+//keep running until we reach something
+var condition = true;
+var x = 0;
+while ( condition ) {
+    //some code to loop over
+    console.log("X is " + x)
+    x++;
+
+    if (x > 15) {
+        condition = false;
+    }
+}
+//this does the same thing
+var x = 0;
+while ( x <= 15 ) {
+    //some code to loop over
+    console.log("X is " + x)
+    x++;
+    }
+}
+
+//--for loop, will run until condition is no longer true
+
+for (var i = 0; i <= 15; i++) {
+    console.log("I is " + i)
+}//i
+
+var sum = 0;
+for (var i=1; i<=50; i++) {
+    sum += i;
+} 
+console.log("The sum of each number 1-50 is: " + sum);
+
+//===================================
+//Functions 
+//===================================
+
+//To DEFINE a function with 3 arguments
+function functionName(argument1, arg2, etc.) {
+    //this is where the code goes
+    return something;
+}
+
+//to CALL a function, use this syntax
+functionName(1,2,3);
+
+//Define x squared
+
+function square(x) {
+    return x * x;
+}
+
+var y = square(4); // y = 16
+
+function add2(a,b) {
+    return a + b;
+}
+console.log(add2(2,2,2))
+
+//===================================
+//Objects 
+//===================================
+
+var obj = {
+    "property1" : "value",
+    property2 : 2, //quotes on property are technically optional
+    property3 : [0,1,2,3,4,5],
+    property4 : "true",
+    property5 : function(arg) {return arg},
+    property6 : {} //empty object
+}
+//square bracket notation
+obj["property1"] //"value1"
+obj["property2"] //2 -----quotes are NOT optionally here
+//dot notation
+obj.property1 //"value1"
+obj.property2 //2
+
+var person = {
+    height: 100,
+    age: 100,
+    name: "Hubert",
+    children: [
+        {
+            height: 80,
+            age: 80,
+            name: "peter"
+        },
+        {
+            height: 70,
+            age: 70,
+            name: "jane"
+        }
+    ]
+}
+//first child's height and age
+person.children[0]["height"];
+person.children[0].age;
